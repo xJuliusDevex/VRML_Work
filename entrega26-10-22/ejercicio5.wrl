@@ -1,0 +1,40 @@
+#VRML V2.0 utf8
+# figura por extrusion
+Shape{
+    geometry Extrusion{
+        creaseAngle 3.14
+        crossSection[
+            0 0,
+            0 1,
+            1 1,
+            0 0
+        ]
+        solid FALSE
+        spine[
+            0 0 0,
+            0 3 0,
+            0 3 3,
+            0 0 3,
+            0 0 0
+        ]
+    }
+    appearance Appearance{
+        material Material{
+            diffuseColor .8 .63 0
+            specularColor .5 .5 .5
+            ambientIntensity 0
+            emissiveColor .14 .11 0
+        }
+    }
+}
+    #Caja de fondo del marco
+    Transform {
+        translation 0 1.5 1.5
+        rotation 0 1 0 1.57
+        children
+        Shape{
+            geometry Box{
+                size 3 3 0.01 
+            }
+        }
+    }  
