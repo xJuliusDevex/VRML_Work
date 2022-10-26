@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+#Fondo
+Background {
+	frontUrl "mario_bros.jpg"
+	backUrl	"peacemaker.jpg"
+	topUrl "obiwan.jpg"
+	bottomUrl "peacemaker.jpg"
+	leftUrl	"locos adams.jpg"
+	rightUrl "una serie.jpg"
+}
+
+#Una esfera dentro del mundo
+
+Shape {
+	geometry Sphere	{
+	radius 2}
+	appearance  Appearance {
+		material Material {diffuseColor 0 0.82 0.98}}
+}
+

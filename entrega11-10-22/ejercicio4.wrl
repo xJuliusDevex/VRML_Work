@@ -1,0 +1,64 @@
+#VRML V2.0 utf8
+
+  Background {
+	skyColor [.8 .8 1]
+}
+
+
+
+# punto de vista 1
+Viewpoint {
+	fieldOfView	2.618
+	description	"gran angular"
+}
+
+# punto de vista 2
+Viewpoint {
+	fieldOfView	1.3962667
+	description	"normal"
+}
+
+# punto de vista 3
+Viewpoint {
+	fieldOfView	.31416
+	description	"telefoto"
+}
+
+# punto de vista 4
+Viewpoint {
+	position 0 0 10
+	orientation	0 0 1 0
+	description	"punto de vista por defecto"
+}
+
+# punto de vista 5
+Viewpoint {
+	jump TRUE
+	position 0 10 10
+	orientation	1 0 0 0
+	description	"punto de vista con salto"
+}
+
+#caja 1
+Shape {
+	geometry Box { size	30 10 2 }
+	appearance Appearance {
+		material Material { diffuseColor 1 .6 0}
+	}
+}
+
+#caja 2
+Shape {
+	geometry Box { size	8 5 5 }
+	appearance Appearance {
+		material Material { diffuseColor .3 0 1}
+	}
+}
+
+#caja 3
+Shape {
+	geometry Box { size	1 1 8 }
+	appearance Appearance {
+		material Material { diffuseColor 0 1 .5}
+	}
+}

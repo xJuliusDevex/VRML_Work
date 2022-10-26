@@ -1,0 +1,82 @@
+#VRML V2.0 utf8
+#Fondo por back-ground#
+Background {
+	skyColor [.8 .8 1]
+}
+
+Transform {
+	translation	 -1 0 0
+	children[
+		Shape {
+		appearance  Appearance {
+			material  Material {
+			diffuseColor  0 0 1
+			}
+		}
+		geometry Cylinder {
+			radius 0.5
+			height 1
+			top	FALSE
+		}
+	}
+	]
+		
+}
+Transform {
+	translation	 0 0 0
+	children[
+		Shape {
+		geometry Text {
+			string ["¿Que figura se presenta?"]
+			fontStyle  FontStyle {
+				justify	"MIDDPLE"
+				size 0.5
+			}
+		}
+	}
+	]
+}
+Transform {
+	translation	 0 -0.5 0
+	children[
+		Shape {
+		geometry Text {
+			string ["Se presenta una figura cilindrica de altura 1 y radio 0.5"]
+			fontStyle  FontStyle {
+				justify	"MIDDPLE"
+				size 0.25
+				}
+			}
+		}
+	]
+}
+Transform {
+	translation	 0 -1 0
+	children[
+		Shape {
+		geometry Text {
+			string ["¿Tiene base la figura?"]
+			fontStyle  FontStyle {
+				justify	"MIDDPLE"
+				size 0.5
+			}
+		}
+	}
+	]
+}
+Transform {
+	translation	 0 -1.5 0
+	children[
+		Shape {
+		geometry Text {
+			string ["Si tiene "]
+			fontStyle  FontStyle {
+				justify	"MIDDPLE"
+				size 0.25
+			}
+			}
+		}
+	]
+}
+
+
