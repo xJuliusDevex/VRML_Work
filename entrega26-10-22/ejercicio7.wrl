@@ -1,0 +1,24 @@
+#VRML V2.0 utf8
+NavigationInfo { headlight FALSE}#Apaga la luz de Casco de Minero
+PointLight{#luz cyan con atenuacion
+    location 8 -3 -10
+    radius 25
+    ambientIntensity  0.5
+    color 0 1 1
+    intensity 3
+    attenuation 0 0.4 0 #posee algo de atenuacion
+}
+Transform {
+    translation 0 -5 -10
+    children Shape{
+        appearance Appearance{
+            material Material{
+                ambientIntensity 1
+                diffuseColor 1 1 1
+            }
+        }
+        geometry Box {
+            size 20 1 10
+        }
+    }
+}

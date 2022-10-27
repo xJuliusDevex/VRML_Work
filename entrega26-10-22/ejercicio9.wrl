@@ -1,0 +1,43 @@
+#VRML V2.0 utf8
+NavigationInfo{ headlight FALSE} #Apaga la luz de Casco de Minero
+SpotLight{
+    location 0 10 -15
+    radius 30
+    ambientIntensity 0.5
+    color 0 1 0
+    intensity 1
+    attenuation 1 0 0
+    direction 0 -1 0 #Apunta hacia abajo
+    cutOffAngle 1.0472 #60 grados en radianes
+    beamWidth 0.785398 #45 grados en radianes
+}
+Transform{
+    translation 0 0 -10
+    children Shape{
+        appearance Appearance{
+            material Material{
+                ambientIntensity 1
+                diffuseColor 1 1 1
+            }
+        }
+        geometry ElevationGrid{
+            xDimension 9
+            zDimension 9
+            xSpacing 1.0
+            zSpacing 1.0
+            solid FALSE
+            height[
+                0.0, 0.0, 0.5, 1.0, 0.5, 0.0, 0.0, 0.0, 0.0,
+                0.0, 0.0, 0.0, 0.0, 2.5, 0.5, 0.0, 0.0, 0.0,
+                0.0, 0.0, 0.5, 0.5, 3.0, 1.0, 0.5, 0.0, 1.0,
+                0.0, 0.0, 0.5, 2.0, 4.5, 2.5, 1.0, 1.5, 0.5,
+                1.0, 2.5, 3.0, 4.5, 5.5, 3.5, 3.0, 1.0, 0.0,
+                0.5, 2.0, 2.0, 2.5, 3.5, 4.0, 2.0, 0.5, 0.0,
+                0.0, 0.0, 0.5, 1.5, 1.0, 2.0, 3.0, 1.5, 0.0,
+                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.2, 0.5,
+                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0
+
+            ]
+        }
+    }
+}

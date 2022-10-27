@@ -1,0 +1,28 @@
+#VRML V2.0 utf8
+NavigationInfo{ headlight FALSE}
+Shape {#Objeto de referencia
+    geometry Cylinder {
+        radius 0.2
+        height 8
+    }
+    appearance Appearance{
+    material Material{
+        diffuseColor 1 1 1
+        }
+    }
+}
+Transform{ #Objeto Autoiluminado
+    translation -0.5 0 0
+    children Shape{
+        geometry Cylinder{ 
+            radius 0.2 
+            height 8
+            }
+        appearance Appearance{
+            material Material{
+                diffuseColor 0.5 0.5 0.5
+                emissiveColor 0 0 1
+            }
+        }
+    }
+}

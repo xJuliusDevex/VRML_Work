@@ -1,0 +1,66 @@
+#VRML V2.0 utf8
+Shape{
+    #objeto de referencia con material mate
+    geometry Sphere {
+        radius 1.1
+    }
+    appearance Appearance{
+        material Material{
+            diffuseColor 0.5 0.5 0.5
+        }
+    }
+}
+Transform{
+    translation -2 2 0
+    children Shape{
+        geometry Sphere{
+            radius 1.1
+        }
+        appearance Appearance{
+            material Material{
+                diffuseColor 0.5 0.5 0.5
+                specularColor 1 0 0
+                shininess 0
+            }
+        }
+    }
+}
+Transform{
+    translation 2 2 0
+    children Shape{
+        geometry Sphere{radius 1.1}
+        appearance Appearance{
+            material Material{
+                diffuseColor 0.5 0.5 0.5
+                specularColor 1 0 0
+                shininess 0.33
+            }
+        }
+    }
+}
+Transform{
+    translation -2 -2 0
+    children Shape {
+        geometry Sphere{ radius 1.1}
+        appearance Appearance{
+            material Material{
+                diffuseColor 0.5 0.5 0.5
+                specularColor 1 0 0
+                shininess 0.66
+            }
+        }
+    }
+}
+Transform{
+    translation -2 -2 0
+    children Shape {
+        geometry Sphere{ radius 1.1}
+        appearance Appearance{
+            material Material{
+                diffuseColor 0.5 0.5 0.5
+                specularColor 1 0 0
+                shininess 1
+            }
+        }
+    }
+}
