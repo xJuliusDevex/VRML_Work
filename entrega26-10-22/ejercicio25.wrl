@@ -1,0 +1,28 @@
+#VRML V2.0 utf8
+
+Transform {
+	translation	-3 0 0
+	children Shape {
+		geometry Box { size	2 2 2}
+		appearance Appearance {
+			material Material { diffuseColor 0.7 0.3 0 }
+		}
+	}
+}
+
+Group {
+	children [
+		DEF	Cubo Transform {
+			children Shape {
+				geometry Box { size	2 2 2 }
+				appearance Appearance {
+					material Material {
+						diffuseColor 0 0.7 0.3 }
+					}
+				}
+			}
+		DEF	PS PlaneSensor { }
+		]
+	}
+
+ROUTE PS.trackPoint_changed	TO Cubo.translation

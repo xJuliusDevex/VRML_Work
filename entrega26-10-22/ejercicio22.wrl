@@ -1,0 +1,21 @@
+#VRML V2.0 utf8
+
+DEF	motorColor TimeSensor {
+	loop			TRUE
+	cycleInterval	5
+}
+
+DEF	Arco ColorInterpolator {
+	key				[ 0, 0.3, 0.6, 1]
+	keyValue		[ 1 0 0, 0 1 0, 0 0 1, 1 0 0 ]
+}
+
+DEF	 CuboColorCambiante Shape {
+	geometry Box { size	2 2 2}
+	appearance Appearance {
+		material DEF ColorCambiante Material {} 
+	}
+}
+
+ROUTE motorColor.fraction_changed TO Arco.set_fraction
+ROUTE Arco.value_changed TO	ColorCambiante.diffuseColor

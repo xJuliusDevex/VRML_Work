@@ -1,0 +1,22 @@
+#VRML V2.0 utf8
+
+Billboard {
+	axisOfRotation 0 1 0
+	children Shape {
+		geometry IndexedFaceSet	{
+			coord Coordinate {
+				point [ 2 3 0, -2 3 0, -2 -3 0, 2 -3 0]
+			}
+			coordIndex [ 0 1 2 3]
+			solid FALSE
+			texCoord TextureCoordinate {
+				point [ 1 1, 0 1, 0 0, 1 0]
+			}
+		}
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"flores.gif"
+			}
+		}
+	}
+}

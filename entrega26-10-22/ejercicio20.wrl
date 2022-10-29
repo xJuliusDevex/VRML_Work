@@ -1,0 +1,38 @@
+#VRML V2.0 utf8
+
+Collision {
+	collide	FALSE
+	children [
+		Transform {
+			translation	-3 0 0
+			children Shape {
+				geometry Box {size 2 2 2}
+				appearance Appearance {
+					material Material { diffuseColor 1 0 0} }
+				}
+			}
+		]
+	}
+
+Collision {
+	collide TRUE
+	children [
+		Shape {
+			geometry Sphere	{ radius 1 }
+			appearance Appearance {
+				material Material { diffuseColor 0 1 0 }
+			}
+		}
+		Transform {
+			translation	3 0 0
+			children Shape {
+				geometry Cone { height 1 bottomRadius 1 }
+				appearance Appearance {
+					material Material {
+						diffuseColor 0 0.5 1}
+					}
+				}
+			}
+		]
+	}
+

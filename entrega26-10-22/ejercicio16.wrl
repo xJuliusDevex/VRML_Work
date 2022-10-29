@@ -1,0 +1,54 @@
+#VRML V2.0 utf8
+
+PROTO Banca [
+	field SFColor colorpatas	1 1 0
+	field SFColor colorBase		0 0 1
+	field SFVec3f proporciones	1 1 1
+	field SFVec3f posicion		0 0 0
+]
+{
+PROTO Pata [
+	field SFColor colorPata		1 1 0
+	field SFVec3f posicion		0 0 0
+	]
+	{
+	Transform {
+		translation	IS posicion	children Shape {
+			geometry Cylinder { radius 0.1 height 1 }
+			appearance Appearance { material
+				Material { diffuseColor	IS colorPata }
+				}
+			}
+		}
+	}
+Transform {
+	translation IS posicion	
+	scale IS proporciones
+	children [
+		Shape{ #Base
+				geometry Box { size	1 0.2 1 }
+				appearance Appearance { material Material {
+					diffuseColor IS	colorBase
+					}
+				}
+			}
+		Pata { posicion	0.4 -0.6 0.4
+			colorPata IS colorpatas
+			}
+		Pata { posicion	-0.4 -0.6 0.4
+			colorPata IS colorpatas
+			}
+		Pata { posicion	-0.4 -0.6 -0.4
+			colorPata IS colorpatas
+			}
+		Pata { posicion	0.4 -0.6 -0.4
+			colorPata IS colorpatas
+			}
+		]
+	}
+}
+
+Banca { }
+Banca { colorpatas 1 0.5 0 colorBase 0.5 0 1 posicion -2 0 0 }
+Banca { colorpatas 0.5 1 0 colorBase 1 0.5 0 posicion -2 0 0 }
+Banca { colorpatas 1 0 0.8 colorBase 1 0.5 0 posicion 0 2 0 proporciones 3 1 1}

@@ -1,0 +1,25 @@
+#VRML V2.0 utf8
+
+DEF	RojoMio Appearance{
+	material Material {
+		diffuseColor	1 0.2 0
+	}
+}
+
+Transform {
+	translation			-2 0 0
+	children Shape {
+		geometry Box {
+			size 3 3 3 }
+			appearance USE RojoMio
+		}
+	}
+
+Transform {
+	translation			2 0 0
+	children Shape {
+		geometry Sphere	{
+			radius 2 }
+			appearance USE RojoMio
+		}
+	}
